@@ -1,0 +1,391 @@
+:root {
+    --border-color: rgb(185, 185, 185);
+    --border-light-color: #E1E1E1;
+    --background-odd-row-color: #F1F1F1;
+    --article-information-color: #888;
+    --search-input-background-color: rgb(244, 244, 244);
+    --black-color: #333;
+    --caption-color: #3B5998;
+    --border-radius: 6px;
+    color: var(--black-color);
+    --default-border: 1px solid var(--border-color);
+    --light-border: 1px solid var(--border-light-color);
+    font-family: Verdana, sans-serif;
+    font-size: 16px;
+}
+
+html {
+    padding: 1rem;
+    min-width: 600px;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+    :root {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 800px) {
+    :root {
+        font-size: 12px;
+    }
+}
+
+header {
+    position: relative;
+}
+
+header .languages {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+header .enter-or-register-box {
+    position: absolute;
+    top: 32px;
+    right: 0;
+}
+
+header nav {
+    position: relative;
+    border: var(--default-border);
+    border-radius: var(--border-radius);
+    padding: 0.75rem 0.25rem;
+    margin-top: 1rem;
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-left: 1rem;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: var(--black-color);
+    font-family: "Arial Narrow", sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+header nav .search {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0.5rem;
+}
+
+header nav .search input:focus-within {
+    border: 0.13rem solid dodgerblue;
+}
+
+header nav .search input {
+    outline: none;
+    background-size: contain;
+    background: var(--search-input-background-color) url(../img/search-16x16.png) left center no-repeat;
+    padding-left: 1.3rem;
+}
+
+.middle {
+    margin-top: 1rem;
+    overflow: auto;
+}
+
+main {
+    margin-right: 21rem;
+}
+
+main .datatable {
+    border-top: var(--light-border);
+    background-color: var(--border-light-color);
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+main .datatable .caption {
+    padding: 0.2rem 0.5rem;
+}
+
+main .datatable table {
+    background-color: white;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    border-collapse: collapse;
+    overflow: hidden;
+}
+
+main .datatable table thead th {
+    border: var(--light-border);
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 0.4rem;
+    overflow: hidden;
+}
+
+main .datatable table tbody {
+    font-size: 0.8rem;
+}
+
+main .datatable table tbody tr:nth-child(odd) {
+    background-color: var(--background-odd-row-color);
+}
+
+main .datatable table tbody tr td {
+    border: var(--light-border);
+    text-align: center;
+    padding: 0.4rem;
+    overflow: hidden;
+}
+
+main article .title {
+    font-weight: bold;
+    color: var(--caption-color);
+    font-size: 1.3rem;
+    margin-bottom: 0.3rem;
+}
+
+main article .information {
+    font-size: 0.9rem;
+    color: var(--article-information-color);
+}
+
+main article .body {
+    border-left: 4px solid var(--border-color);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding-left: 1rem;
+}
+
+main article .attachment {
+    padding-left: 1.4rem;
+    color: rgb(136, 136, 136);
+    font-family: verdana, arial, sans-serif;
+    font-size: 0.8rem;
+}
+
+main article .attachment li {
+    padding-bottom: 0.1rem;
+    margin-left: 0.15rem;
+    list-style-image: url(../img/paperclip-16x16.png);
+}
+
+main article .attachment li:last-child {
+    padding-bottom: 0;
+}
+
+main article .footer {
+    overflow: hidden;
+    border: var(--default-border);
+    border-radius: var(--border-radius);
+}
+
+main article .footer .left {
+    display: block;
+    float: left;
+}
+
+main article .footer .left * {
+    vertical-align: middle;
+    padding: 0.3rem 0;
+}
+
+main article .footer .left [title="Vote Up"] {
+    padding-left: 0.3rem;
+}
+
+main article .footer .left .positive-score {
+    color: green;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+main article .footer .left [title="Vote Down"] {
+    padding-right: 0.3rem;
+}
+
+main article .footer .right {
+    display: block;
+    float: right;
+    margin: 0.3rem 0.5rem;
+    padding: 0.2rem;
+    font-size: 0.9rem;
+    font-family: verdana, arial, sans-serif;
+}
+
+main article .footer .right [title="Publish Time"] {
+    padding-bottom: 0.3rem;
+    padding-right: 0.3rem;
+}
+
+main article .footer .right [title="Comments"] {
+    padding-bottom: 0.2rem;
+    padding-left: 0.3rem;
+}
+
+main article .footer .right [href="#"] {
+    padding-bottom: 0.3rem;
+}
+
+main article .footer .right * {
+    vertical-align: middle;
+}
+
+footer {
+    margin-top: 2rem;
+    border-top: var(--default-border);
+    padding-top: 0.5rem;
+    text-align: center;
+}
+
+aside {
+    float: right;
+    width: 20rem;
+}
+
+aside section {
+    border: var(--default-border);
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+}
+
+aside section .header {
+    border-bottom: var(--default-border);
+    padding: 0.25rem;
+    font-weight: bold;
+    color: var(--caption-color);
+}
+
+aside section .header:before {
+    content: "→";
+}
+
+aside section .body {
+    padding: 1rem;
+}
+
+aside section .footer {
+    border-top: var(--default-border);
+    overflow: auto;
+    padding: 0.25rem;
+}
+
+aside section .footer a {
+    float: right;
+    font-size: 0.75rem;
+}
+
+aside section .footer a:after {
+    content: " →";
+}
+
+main .login-form-box {
+    margin: 0 auto;
+    width: 29rem;
+}
+
+main .login-form-box .header {
+    padding: 0.25rem;
+    font-weight: bold;
+    color: var(--caption-color);
+    border-top: var(--default-border);
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+    border-left: var(--default-border);
+    border-right: var(--default-border);
+}
+
+main .login-form-box .body {
+    text-align: center;
+    overflow: hidden;
+    border: var(--default-border);
+}
+
+main .login-form-box .body .field {
+    text-align: left;
+}
+
+main .login-form-box .body .field .name, .value {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 0.2rem;
+}
+
+main .login-form-box .body .field .name {
+    width: 10.5rem;
+    text-align: right;
+}
+
+main .login-form-box .body .error {
+    color: red;
+    float: left;
+    font-size: 0.75rem;
+}
+
+main .login-form-box .body .field .error:before {
+    display: inline-block;
+    width: 11.15rem;
+    content: "";
+}
+
+main .login-form-box .body .checkbox-field {
+    font-size: 0.75rem;
+    padding-top: 1.5rem;
+}
+
+main .login-form-box .body .checkbox-field input {
+    appearance: none;
+    width: 0.6rem;
+    height: 0.6rem;
+    background-color: lightgray;
+    border: var(--default-border);
+    border-radius: 2px;
+    outline: none;
+}
+
+main .login-form-box .body .checkbox-field:before {
+    display: inline-block;
+    width: 0.1rem;
+    padding-left: 0.1rem;
+    content: "";
+}
+
+main .login-form-box .body .checkbox-field input:checked {
+    appearance: revert;
+}
+
+main .login-form-box .body .button-field {
+    padding-top: 1.5rem;
+}
+
+main .login-form-box .body .button-field * {
+    width: 5.93rem;
+}
+
+main .login-form-box .body .links {
+    text-align: right;
+    padding: 0.2rem;
+    font-size: 0.75rem;
+}
+
+main .login-form-box .footer {
+    display: block;
+    overflow: hidden;
+    border-left: var(--default-border);
+    border-right: var(--default-border);
+    border-bottom: var(--default-border);
+}
+
+main .login-form-box .footer * {
+    overflow: auto;
+    padding: 0.25rem;
+    float: right;
+    font-size: 0.75rem;
+}
