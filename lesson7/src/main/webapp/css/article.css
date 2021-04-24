@@ -1,0 +1,98 @@
+/* article */
+article {
+    margin-bottom: 2rem;
+}
+
+article .title {
+    font-weight: bold;
+    color: var(--caption-color);
+    font-size: 1.3rem;
+    margin-bottom: 0.3rem;
+}
+
+article .information {
+    padding-bottom: 0.2rem;
+    font-size: 0.9rem;
+    color: var(--article-information-color);
+}
+
+article .text {
+    border-left: 4px solid var(--border-color);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding-left: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+article .attachment {
+    padding-left: 1.4rem;
+    color: rgb(136, 136, 136);
+    font-family: verdana, arial, sans-serif;
+    font-size: 0.8rem;
+}
+
+article .attachment li {
+    padding-bottom: 0.1rem;
+    margin-left: 0.15rem;
+    list-style-image: url(../img/paperclip-16x16.png);
+}
+
+article .attachment li:last-child {
+    padding-bottom: 0;
+}
+
+article .footer {
+    overflow: hidden;
+    border: var(--default-border);
+    border-radius: var(--border-radius);
+}
+
+article .footer .left {
+    display: block;
+    float: left;
+}
+
+article .footer .left * {
+    vertical-align: middle;
+    padding: 0.3rem 0;
+}
+
+article .footer .left [title="Vote Up"] {
+    padding-left: 0.3rem;
+}
+
+article .footer .left .positive-score {
+    color: green;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+article .footer .left [title="Vote Down"] {
+    padding-right: 0.3rem;
+}
+
+article .footer .right {
+    display: block;
+    float: right;
+    margin: 0.3rem 0.5rem;
+    padding: 0.2rem;
+    font-size: 0.9rem;
+    font-family: verdana, arial, sans-serif;
+}
+
+article .footer .right [title="Publish Time"] {
+    padding-bottom: 0.3rem;
+    padding-right: 0.3rem;
+}
+
+article .footer .right [title="Comments"] {
+    padding-bottom: 0.2rem;
+    padding-left: 0.3rem;
+}
+
+article .footer .right [href="#"] {
+    padding-bottom: 0.3rem;
+}
+
+article .footer .right * {
+    vertical-align: middle;
+}
